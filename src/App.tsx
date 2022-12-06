@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Quizzer } from "./quizzer/Quizzer";
 import { Button } from "react-bootstrap";
+//import { QuestionEdit } from "./quizzer/QuestionEdit";
 //import { ShowHideTasks } from "./tasks/ShowHideTasks";
 
 function App(): JSX.Element {
