@@ -5,6 +5,7 @@ import { Question} from "../interfaces/question";
 import "./QuestionEdit.css";
 
 interface questionEditInterface {
+    //edit
     index: number,
     lastIndex: number,
     question: Question,
