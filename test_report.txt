@@ -1,0 +1,120 @@
+
+> tasks@0.1.0 test
+> react-scripts test --coverage
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+PASS src/quizzer/Quizzer.test.tsx
+  ● Console
+
+    console.error
+      Warning: Each child in a list should have a unique "key" prop.
+      
+      Check the render method of `QuizList`. See https://reactjs.org/link/warning-keys for more information.
+          at div
+          at QuizList (/home/runner/work/quizzer_start/quizzer_start/src/quizzer/QuizList.tsx:16:5)
+          at div
+          at Quizzer (/home/runner/work/quizzer_start/quizzer_start/src/quizzer/Quizzer.tsx:24:35)
+
+      30 |
+      31 |     return (
+    > 32 |         <div className="quiz_list">
+         |         ^
+      33 |             {!displayId && (
+      34 |                 <>
+      35 |                     {quizzes.map((quiz: Quiz) => (
+
+      at printWarning (node_modules/react/cjs/react-jsx-dev-runtime.development.js:117:30)
+      at error (node_modules/react/cjs/react-jsx-dev-runtime.development.js:93:5)
+      at validateExplicitKey (node_modules/react/cjs/react-jsx-dev-runtime.development.js:986:5)
+      at validateChildKeys (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1013:11)
+      at jsxWithValidation (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1174:15)
+      at QuizList (src/quizzer/QuizList.tsx:32:9)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
+
+    console.error
+      Warning: Encountered two children with the same key, `5`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at div
+          at QuizList (/home/runner/work/quizzer_start/quizzer_start/src/quizzer/QuizList.tsx:16:5)
+          at div
+          at Quizzer (/home/runner/work/quizzer_start/quizzer_start/src/quizzer/Quizzer.tsx:24:35)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.log
+      inside swap
+
+      at swapQuestion (src/quizzer/QuizEdit.tsx:45:17)
+
+    console.log
+      inside swap
+
+      at swapQuestion (src/quizzer/QuizEdit.tsx:45:17)
+
+PASS src/App.test.tsx
+  ● Console
+
+    console.error
+      Warning: Each child in a list should have a unique "key" prop.
+      
+      Check the render method of `QuizList`. See https://reactjs.org/link/warning-keys for more information.
+          at div
+          at QuizList (/home/runner/work/quizzer_start/quizzer_start/src/quizzer/QuizList.tsx:16:5)
+          at div
+          at Quizzer (/home/runner/work/quizzer_start/quizzer_start/src/quizzer/Quizzer.tsx:24:35)
+          at div
+          at div
+          at App (/home/runner/work/quizzer_start/quizzer_start/src/App.tsx:9:35)
+
+      30 |
+      31 |     return (
+    > 32 |         <div className="quiz_list">
+         |         ^
+      33 |             {!displayId && (
+      34 |                 <>
+      35 |                     {quizzes.map((quiz: Quiz) => (
+
+      at printWarning (node_modules/react/cjs/react-jsx-dev-runtime.development.js:117:30)
+      at error (node_modules/react/cjs/react-jsx-dev-runtime.development.js:93:5)
+      at validateExplicitKey (node_modules/react/cjs/react-jsx-dev-runtime.development.js:986:5)
+      at validateChildKeys (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1013:11)
+      at jsxWithValidation (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1174:15)
+      at QuizList (src/quizzer/QuizList.tsx:32:9)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
+
+-------------------|---------|----------|---------|---------|--------------------------------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                          
+-------------------|---------|----------|---------|---------|--------------------------------------------
+All files          |   82.55 |    81.48 |   76.71 |   82.06 |                                            
+ src               |   66.66 |       50 |      50 |   66.66 |                                            
+  App.tsx          |   66.66 |       50 |      50 |   66.66 | 17                                         
+ src/interfaces    |       0 |        0 |       0 |       0 |                                            
+  question.ts      |       0 |        0 |       0 |       0 |                                            
+  quiz.ts          |       0 |        0 |       0 |       0 |                                            
+ src/quizzer       |   82.87 |       84 |   77.46 |   82.39 |                                            
+  AddQuizModal.tsx |   64.28 |      100 |      40 |   64.28 | 38-56                                      
+  QuestionEdit.tsx |   48.38 |    66.66 |   43.75 |   48.38 | 30-33,52-53,60-62,70-72,95,168,202,226,250 
+  QuizCard.tsx     |     100 |       80 |     100 |     100 | 34                                         
+  QuizEdit.tsx     |   85.18 |      100 |   71.42 |   85.18 | 34-36,68,98                                
+  QuizExpanded.tsx |     100 |    85.71 |     100 |     100 | 73                                         
+  QuizList.tsx     |     100 |      100 |     100 |     100 |                                            
+  QuizQuestion.tsx |     100 |    85.71 |     100 |     100 | 26-33                                      
+  QuizView.tsx     |     100 |      100 |     100 |     100 |                                            
+  Quizzer.tsx      |     100 |      100 |     100 |     100 |                                            
+-------------------|---------|----------|---------|---------|--------------------------------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        4.642 s
+Ran all test suites.
